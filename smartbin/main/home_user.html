@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style2.css">
+    <style>
+        /* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position:relative;
+  width: 100%;
+  min-height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+  position: relative;
+  bottom: 0;
+  color: #157050;
+  width: 100%;
+  padding: 20px;
+  font-size: 30px;
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+  /* background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
+    
+}
+.content .par{
+    padding-top: 20px;
+
+    font-size: 20px;
+    padding-right:70% ;
+    padding-bottom: 30px;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+    padding-right: 100px;
+  width: 200px;
+  font-size: 25px;
+  padding: 7px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+p{
+  padding-bottom: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
+  font-size: 20px;
+}
+hr{
+  height: 10px;
+  top: 20px;
+  color: #157050;
+  border: none;
+  border-radius: 30px;
+}
+
+.video-section {
+  position: relative;
+}
+.video-section .content {
+  position: absolute;
+  bottom: -200px;
+  left: 0;
+  height: 225px;
+}
+.con-img{
+  width: 100%;
+  height: 80%;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+.about-us{
+  height: 100vh;
+  width: 100%;
+  padding: 10px 0;
+  background: #ddd;
+}
+.pic{
+    padding-top: 20px;
+  height: 90vh;
+  width:  60%;
+}
+.about{
+  width: 1130px;
+  max-width: 85%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.text{
+  width: 540px;
+}
+.text h2{
+  font-size: 90px;
+  font-weight: 600;
+  margin-bottom: 10px;
+
+}
+.text h5{
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+span{
+  color: #4070f4;
+}
+.text p{
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+.data{
+  margin-top: 30px;
+}
+.hire{
+  font-size: 18px;
+  background: #4070f4;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  left: 30px;
+  right: 30px;
+  padding: 14px 25px;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+.hire:hover{
+  background: #000;
+  border: 1px solid #4070f4;
+}
+.log{
+    width: 20vh;
+    height: 20vh;  
+}
+.was{
+
+}
+hr{
+    width: 80%;
+    
+    position: relative;
+            top: 20px;
+            border: none;
+            height: 10px;
+            background: green;
+            margin-bottom: 50px;
+}
+ </style>
+    <title>Document</title>
+</head>
+<body>
+    <Main>
+         
+<div class="header-main-size">
+	<div class="header-main">
+		<div class="header-main-left">
+			<a class="pass-link active" href="home_user.html">
+        <img src="img/LOGO.png"  alt="Passion Logo" ></a>
+		</div>
+	<div class="header-main-right">
+		<div class="header-nav topnav" id="myTopnav">
+		<a class="homeMenus pass-links slide-animate" href="home.php">Home</a>
+    <a class="pass-links slide-animate" href="contact.html">Contacts</a>
+		<div class="main-menu">
+		<a class="slide-animate" href="#">
+			<div class="flex-iconMenu">Map
+			</div>
+		</a>
+		</div>
+		<!-- <a class="pass-links slide-animate" href="#">Jobs</a> -->
+		<div class="main-menu">
+			<a  class="pass-links slide-animate active" href="#">
+				<div class="flex-iconMenu">DashBoard
+					<i class="fa fa-angle-down"></i>
+				</div>
+			</a>
+			<div class="main-sub-menu">
+				<div class="sub-menu">
+					<a class="pass-links" href="dashboard_1.html"> Bin 1</a>
+					<a class="pass-links" href="#"> Bin 2</a>
+				</div>
+			</div>
+		</div>
+		<a class="pass-links slide-animate" href="../chat_system/index.php">Complain </a></div>
+		<a class="pass-link" href="../login_form.php">Login <br>SignUp</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+		</a>
+	</div>
+	</div>
+</div>
+  <div>
+
+    <div class="video-section">
+      <!-- <video id="myVideo" src="videos/smart_bin.mp4"  type="video/mp4" controls="controls autoplay">
+      </video> -->
+      <img class="con-img" src="img/con.jpg" alt="">
+
+      <div class="content">
+        <h1>Smart DustBin</h1>
+        <p class="par">Smart bins, also known as intelligent or connected bins, are an innovative approach to waste management </p>
+        <!-- Use a button to pause/play the video with JavaScript -->
+        <button id="myBtn" onclick="myFunction()"><a href="contact.html" style=" text-decoration: none; color: white;"> Contact Now</a></button>
+    
+      </div>
+    </div>
+  </div> 
+  <!-- Optional: some overlay text to describe the video -->
+  <br><br><br><br><br><br><br><br><br><br>
+  
+</Main>
+<section class="about-us">
+    <div class="about">
+      <img src="img/co.png" class="pic">
+      <div class="text">
+        <h2>&nbsp; About Us</h2>
+        <h5> &nbsp;&nbsp; Welcome To<span> &nbsp;CLEV</span></h5>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;Welcome to CLEV, where innovation meets sustainability. We're passionate about revolutionizing waste management through cutting-edge smart bin technology.
+          </p><p>
+      At CLEV, we believe in a future where waste is managed intelligently, efficiently, and sustainably. Our team of dedicated professionals is committed to developing innovative solutions that address the challenges of modern waste management while minimizing environmental impact.
+      </p>
+      <p>
+
+      <p>
+         
+      Join us in our journey towards a cleaner, smarter, and more sustainable world. Together, we can make a difference—one smart bin at a time.
+          </p>
+        <div class="data">
+        <a href="#" class="hire"> &nbsp; &nbsp; &nbsp; &nbsp;Learn More</a></div></div></div></section>
+<footer><br><br>
+  <!-- <center> <h1 style="padding: 30px;">About Us</h1></center><div class ="about" style="display: inline;"><div class="img" style="display: inline;" > <img src="img/LOGO.png"  alt="Passion Logo" ></div> -->
+   
+</footer><center>
+<hr align="center"><h1> Our Colaborate</h1><br><br><br>
+
+<div class="row">
+  <!-- <div class="column">
+    <marquee behavior="alternate" direction="left">
+        <img src="img/clean.jpg" alt="">
+        <img src="img/cont.png" alt="">
+
+    </marquee> -->
+    <!-- <marquee onMouseOver="this.stop();" onMouseOut="this.start();" direction="left" scrollamount="10" loop="infinite"> -->
+        &nbsp;&nbsp;&nbsp;&nbsp; <img class="log" src="img/nepal_logo.jpg"> &nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp; <img class="log" src="img/ni.jpg"> &nbsp;&nbsp;
+
+        &nbsp;&nbsp; <img class="log" src="img/cle.jpg"> &nbsp;&nbsp; &nbsp;&nbsp;
+        <img class="log" src="img/clean.jpg"> &nbsp;&nbsp; &nbsp;&nbsp;
+        <img class="log" src="img/solid_was.jpg"> &nbsp;&nbsp; &nbsp;&nbsp;
+        <img class="log was" src="img/log1.jpg"> &nbsp;&nbsp; &nbsp;&nbsp;
+        <img class="log " src="img/log2.jpg"> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+        <img class="log " src="img/log3.png"> &nbsp;&nbsp;
+        <!-- </marquee> -->
+<br>
+<br>
+<br>
+<br>
+</div>
+    </center>
+    
+    <footer>
+        <div>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+
+        </div></div>
+        <br><br><br><br>
+        <ul class="social_icon">
+            <li>
+                <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+
+            </li>
+            <li>
+                <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            </li>
+            <li>
+                <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+            </li>
+            <li>
+              <a href="https://api.whatsapp.com/send?phone=+9779765887074&text=Hey, I need help">
+                <i class="fa fa-whatsapp my-float mt-0"></i>
+                </a>
+            </li>
+            
+        </ul>
+        <ul class="menu1">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Courses</a>
+            </li>
+            <li>
+                <a href="#">About Us</a>
+            </li>
+            <li>
+                <a href="#">Contact Us</a>
+            </li>
+            <li>
+                <a href="#">Services</a>
+            </li>
+            <li>
+                <a href="#">Login And Sign UP</a>
+            </li>
+            
+
+        </ul><br>
+        <p>
+            &copy; 2024 All rights reserved | This template is made with CLEV
+        </p>
+        
+    </footer>
+</body><script>
+// Get the video
+var video = document.getElementById("myVideo");
+
+// Get the button
+var btn = document.getElementById("myBtn");
+
+// Pause and play the video, and change the button text
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+  </script>
+</html>
